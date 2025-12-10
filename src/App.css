@@ -1,0 +1,13 @@
+html, body {
+    margin: 0;
+}
+
+
+header{
+    font-family: "Bodoni Moda", serif;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+
+}

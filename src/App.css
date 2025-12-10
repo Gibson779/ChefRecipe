@@ -8,7 +8,7 @@ header{
     font-family: "Bodoni Moda", serif;
     justify-content: center;
     background-color: white;
-    padding: 20px;
+    padding: 0px;
     gap: 1rem;
      
 
@@ -21,4 +21,34 @@ header .image img {
 
 .image img{
     padding-top: 20px;
+}
+
+.content{
+    background-color: lightgrey;
+     height: 100vh;        /* full height of the screen */
+    width: 100vw;         /* full width of the screen */
+}
+
+.input-box {
+  padding: 10px;
+  width: 250px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  background-color: #4CAF50;   /* green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #45a049;  /* darker green */
 }

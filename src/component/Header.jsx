@@ -1,13 +1,12 @@
 export default function Header(){
     return(
-        <header>
-            <h1>Chef Claude</h1>
+      <header>
+        <div className="image">
             <img src="chefsHat.jpg" alt="" />
-
-
-
-
-        </header>
+            </div>
+            <h1>Chef Claude</h1>
+            
+     </header>
         
     )
 }

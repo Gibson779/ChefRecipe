@@ -4,10 +4,21 @@ html, body {
 
 
 header{
+    display: flex;
     font-family: "Bodoni Moda", serif;
-    align-items: center;
+    justify-content: center;
     background-color: white;
-    text-align: center;
     padding: 20px;
+    gap: 1rem;
+     
 
+}
+header .image img {
+    width: 80px;    /* adjust size as needed */
+    height: auto;   /* keeps aspect ratio */
+    display: block;
+}
+
+.image img{
+    padding-top: 20px;
 }

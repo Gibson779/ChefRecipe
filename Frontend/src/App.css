@@ -27,6 +27,7 @@ header .image img {
     background-color: lightgrey;
      height: 100vh;        /* full height of the screen */
     width: 100vw;         /* full width of the screen */
+    
 }
 
 .input-box {
@@ -51,4 +52,18 @@ header .image img {
 
 .add-btn:hover {
   background-color: #45a049;  /* darker green */
+}
+
+main{
+  text-align: center;
+  
+}
+
+.objects {
+  display: flex;
+  justify-content: center;
+  background-color: #45a049;
+  padding: 10px;
+  gap: 1rem;
+   height: 10vh;
 }

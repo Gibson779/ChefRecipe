@@ -1,24 +1,33 @@
 export default function Main(){
+    const ingredients = ["chicken", "Tomatoes", "Peppers"]
+
+    const ingredientsList = ingredients.map((ingredient) => (
+    <li key={ingredient}>{ingredient}</li>
+  ))
+
+
     return(
         <>
         <main>
-         <div className="content">
-             <h1>Ingredients on Hand:</h1>
-         <div className="objects">
+         <form className="content">
          <input
            type="text" 
              placeholder="Type something..." 
               className="input-box"       
         />
-        <button className="addbtn">
-            Add Ingredients
-
+        <button>Add ingredient</button>
         
-        </button>
-        </div>
-        </div>
+
+        </form>
+
+        <ul>
+            {ingredientsList}
+
+        </ul>
         </main>
         </>
         
     )
 } 
+
+

@@ -11,6 +11,7 @@ header{
     background-color: white;
     padding: 0px;
     gap: 1rem;
+    
      
 
 }
@@ -25,30 +26,34 @@ header .image img {
 }
 
 .content{
-    background-color: lightgrey;
-     height: 100vh;        /* full height of the screen */
-    width: 100vw;         /* full width of the screen */
+    background-color: rgb(255, 255, 255);
+      display: flex;
+    justify-content: center;
+    gap: 12px;
+    height: 38px;        /* full width of the screen */
     
 }
 
-.input-box {
-  padding: 10px;
-  width: 250px;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.content > input {
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    padding: 9px 13px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
 }
 
-.add-btn {
-  background-color: #4CAF50;   /* green */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: background-color 0.2s;
+
+.content > button {
+    font-family: Inter, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    width: 150px;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .add-btn:hover {
@@ -66,5 +71,10 @@ main{
   background-color: #45a049;
   padding: 10px;
   gap: 1rem;
-   height: 10vh;
+  height: 10vh;
+}
+
+ul{
+   
+  
 }

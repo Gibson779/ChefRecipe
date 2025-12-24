@@ -6,9 +6,15 @@ export default function Main(){
   ))
 
   function handleSubmit(event){
-    event.preventDefualt()
+    event.preventDefault()
     console.log("Form submitted")
+     const formData = new FormData(event.currentTarget)
+        const newIngredient = formData.get("ingredient")
+        console.log(newIngredient)
+
   }
+
+
 
 
     return(

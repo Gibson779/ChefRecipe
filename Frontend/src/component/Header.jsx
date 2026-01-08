@@ -6,7 +6,7 @@ export default function Header(){
         <div className="image">
             <img src={chefClaudeLogo} />
             </div>
-            <h1>Chef Claude</h1>
+            <h1>Shopping List</h1>
             
      </header>
         

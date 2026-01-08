@@ -16,7 +16,7 @@ header{
 
 }
 header .image img {
-    width: 80px;    /* adjust size as needed */
+    width: 300px;    /* adjust size as needed */
     height: auto;   /* keeps aspect ratio */
     display: block;
 }

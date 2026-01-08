@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 export default function Main(){
-    const [ingredients, setIngredients] = useState(["chicken", "Tomatoes", "Peppers"])
+    const [ingredients, setIngredients] = useState([])
 
     const ingredientsList = ingredients.map((ingredient) => (
     <li key={ingredient}>{ingredient}</li>
@@ -27,7 +27,7 @@ export default function Main(){
     event.currentTarget.reset()
   }
     
-  }
+  
 
     return(
         <>
@@ -52,6 +52,6 @@ export default function Main(){
         </>
         
     )
-} 
 
 
+  }

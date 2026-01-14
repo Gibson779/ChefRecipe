@@ -3,17 +3,17 @@ import {useState} from "react"
 export default function Main(){
     const [ingredients, setIngredients] = useState([])
 
+
+
+
     const ingredientsList = ingredients.map((ingredient) => (
     <li key={ingredient}>{ingredient}</li>
   ))
 
   function handleSubmit(event){
     event.preventDefault()
-  
      const formData = new FormData(event.currentTarget)
      const newIngredient = formData.get("ingredient")
-
-
      // Add ingredient to state
     setIngredients(prevIngredients => [
       ...prevIngredients,

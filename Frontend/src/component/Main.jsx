@@ -24,8 +24,6 @@ export default function Main(){
     event.currentTarget.reset()
   }
     
-  
-
     return(
         <>
         <main>

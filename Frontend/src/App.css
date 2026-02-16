@@ -74,7 +74,50 @@ main{
   height: 10vh;
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    margin: 10px;
+}
+
 ul{
    list-style-position: inside;
   
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between form elements */
+
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.form > input {
+    border-radius: 100px;
+    border: 1px solid #0D9488;
+    height: 2rem;
+    text-indent: 10px;
+}
+
+
+.form > button {
+    border-radius: 100px;
+    border: 1px solid #0D9488;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.form > button:hover {
+    background-color: #115E59;
+    border-color: #042F2E;
+    color: white;
 }

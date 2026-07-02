@@ -5,20 +5,13 @@ import { getRecipeFromMistral } from "../ai"
 
 export default function Main() {
 
-    const [ingredients, setIngredients] = React.useState    (
-     ["all the main spices", "pasta", "ground beef", "tomato paste"]
-    )
-
-
-    const [recipeShown, setRecipeShown] = React.useState(false)
-
+    const [ingredients, setIngredients] = React.useState([])
     const [recipe, setRecipe] = React.useState("")
      
    async function getRecipe() {
     const generatedRecipe = await getRecipeFromMistral(ingredients)
-
     setRecipe(generatedRecipe)
-    setRecipeShown(true)
+    
 }
      
     function addIngredient(formData) {
@@ -37,10 +30,15 @@ export default function Main() {
                 />
                 <button>Add ingredient</button>
             </form>
-             {ingredients.length > 0 && <IngredientsList 
+
+             {ingredients.length > 0 && 
+             <IngredientsList 
              ingredients={ingredients} 
-              getRecipe={getRecipe}/>}
-            {recipeShown && <ClaudeRecipe recipe={recipe} />}
+              getRecipe={getRecipe}
+              />
+              }
+
+            {recipe && <ClaudeRecipe recipe={recipe} />}
         </main>
     )
 }

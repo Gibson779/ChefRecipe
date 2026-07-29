@@ -1,11 +1,11 @@
 import { HfInference } from "@huggingface/inference";
 
 const SYSTEM_PROMPT = `
-You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make...
+ Create a recipe in under 300 words using these ingredients...
 `;
 
 const hf = new HfInference(process.env.HF_ACCESS_TOKEN);
-console.log(process.env.HF_ACCESS_TOKEN?.slice(0, 5));
+
 
 export async function handler(event) {
   try {
@@ -25,7 +25,7 @@ export async function handler(event) {
           content: `I have ${ingredientsString}. Please give me a recipe.`,
         },
       ],
-      max_tokens: 1024,
+      max_tokens: 200,
     });
 
     return {

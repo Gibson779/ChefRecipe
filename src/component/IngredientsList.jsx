@@ -11,7 +11,8 @@ export default function IngredientsList(props){
     return(
         <>
        <section>
-                <h2>Ingredients on hand:</h2>
+                <h2>Chosse 4 Ingredients and click get recipe:</h2>
+                <h2>This make take a minute</h2>
 
                 <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
 

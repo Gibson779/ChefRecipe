@@ -1,5 +1,3 @@
-
-
 const SYSTEM_PROMPT = 
 `Create a recipe in under 300 words using these ingredients...
 Format your response in markdown to make it easier to render to a web page`

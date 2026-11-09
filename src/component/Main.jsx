@@ -1,7 +1,7 @@
 import React from "react"
 import IngredientsList from "../component/IngredientsList";
 import ClaudeRecipe from "../component/ClaudeRecipe";
-import { getRecipeFromMistral } from "../ai"
+import { getRecipeFromOpenRouter } from "../ai"
 
 export default function Main() {
 
@@ -10,7 +10,7 @@ export default function Main() {
     
      
    async function getRecipe() {
-    const generatedRecipe = await getRecipeFromMistral(ingredients)
+    const generatedRecipe = await getRecipeFromOpenRouter(ingredients)
     setRecipe(generatedRecipe)
     
 }

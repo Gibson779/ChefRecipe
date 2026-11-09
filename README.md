@@ -23,6 +23,6 @@ Users simply enter four ingredients, and the app uses AI to generate a unique re
 
 - React
 - Vite
-- JavaScript (ES6+)
+- JavaScript 
 - CSS
-- Hugging Face Inference API
+- OpenRoute API

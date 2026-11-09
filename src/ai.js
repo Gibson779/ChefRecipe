@@ -1,10 +1,4 @@
-const SYSTEM_PROMPT = 
-`Create a recipe in under 300 words using these ingredients...
-Format your response in markdown to make it easier to render to a web page`
-
-
-export async function getRecipeFromMistral(ingredientsArr) {
-  
+export async function getRecipeFromOpenRouter(ingredientsArr) {
   const response = await fetch("/.netlify/functions/recipe", {
     method: "POST",
     headers: {
@@ -16,7 +10,8 @@ export async function getRecipeFromMistral(ingredientsArr) {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to generate recipe");
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.error || "Failed to generate recipe");
   }
 
   const data = await response.json();

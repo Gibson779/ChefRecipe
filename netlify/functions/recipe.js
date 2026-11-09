@@ -19,6 +19,7 @@ You may suggest basic seasonings and pantry staples.
 
 export async function handler(event) {
   try {
+    
     // Only allow POST requests
     if (event.httpMethod !== "POST") {
       return {

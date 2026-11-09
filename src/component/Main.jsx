@@ -1,6 +1,6 @@
 import React from "react"
 import IngredientsList from "../component/IngredientsList";
-import ClaudeRecipe from "../component/ClaudeRecipe";
+import Recipe from "../component/Recipe";
 import { getRecipeFromOpenRouter } from "../ai"
 
 export default function Main() {
@@ -39,7 +39,7 @@ export default function Main() {
               />
               }
 
-            {recipe && <ClaudeRecipe recipe={recipe} />}
+            {recipe && <Recipe recipe={recipe} />}
         </main>
     )
 }

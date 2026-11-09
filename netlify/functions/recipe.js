@@ -71,6 +71,9 @@ export async function handler(event) {
           ],
           max_tokens: 800,
           temperature: 0.7,
+          reasoning: {
+    enabled: false,
+  },
         }),
       }
     );
@@ -92,7 +95,14 @@ export async function handler(event) {
 
     // Extract the recipe from the response
     const message = result.choices?.[0]?.message;
-    const recipe = message?.content;
+    const recipe =
+  typeof message?.content === "string"
+    ? message.content
+    : Array.isArray(message?.content)
+      ? message.content
+          .map(item => item.text || "")
+          .join("\n")
+      : "";
 
     if (typeof recipe !== "string" || !recipe.trim()) {
       console.error("Recipe content was empty.", {
